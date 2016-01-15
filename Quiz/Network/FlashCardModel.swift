@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class FlashCardModel: ParseComModel {
+class FlashCardModel: PrimaryParseComModel, ParseComModel {
     
     let questionText: String?
     let questionImageData: UIImage?
@@ -24,6 +24,47 @@ class FlashCardModel: ParseComModel {
     }
 }
 
-class ParseCardManager {
+
+//enum Result<T> {
+//    case Success(T)
+//    case Failure(NSError)
+//}
+
+//typealias FlashCardResponse = Result<FlashCardModel>
+
+class ParseComLoader<T: ParseComModel> { //PrimatyParseComModel
+    func fetchCards() -> Observable<[T]> {
+        
+        let observable = create { (observer: AnyObserver<[T]>) -> Disposable in
+            let query = PFQuery(className: FlashCardModel.className() )
+            query.findObjectsInBackgroundWithBlock { (response:[PFObject]?, error:NSError?) -> Void in
+                if let resposne = response {
+                    let flashCards = resposne.map{T.init(object: $0)}
+                    observer.onNext(flashCards)
+                    observer.onCompleted()
+                } else {
+                    observer.onError(error ?? InternalErrors.NoResult.getError())
+                }
+            }
+            return NopDisposable.instance
+        }
+        return observable
+    }
+}
+
+enum InternalErrors: Int {
+    private struct Consts {
+        static let LocalDomain = "Quiz"
+    }
     
+    case NoResult = 3000
+    
+    func getError() -> NSError {
+        switch self {
+        case .NoResult:
+            let userInfo = [NSLocalizedDescriptionKey : "No items to return."]
+            return NSError(domain: Consts.LocalDomain, code: self.rawValue, userInfo: userInfo)
+        }
+        
+    }
 }

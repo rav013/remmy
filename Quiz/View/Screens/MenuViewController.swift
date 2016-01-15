@@ -12,19 +12,30 @@ import Parse
 class MenuViewController: UIViewController {
     
     @IBOutlet weak var mainCollectionView: UICollectionView?
-    var objects:[PFObject] = []
+    
+    let disposeBag = DisposeBag()
+    
+    var flashCards:[FlashCardModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let query = PFQuery(className: "FlashCard")
-        query.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error:NSError?) -> Void in
-            if let objects = objects {
-                self.objects.appendContentsOf(objects)
-                self.mainCollectionView?.reloadData()
-            } else {
-                print("Error during downloading flash cards")
-            }
-        }
+
+        let loader = ParseComLoader<FlashCardModel>()
+        loader.fetchCards().subscribe(onNext: { (cardsModel) -> (Void) in
+                print("Card has been downloaded")
+            }, onError: { (error) -> Void in
+                print("Downloading error \(error)")
+            })
+        .addDisposableTo(disposeBag)
+//        let query = PFQuery(className: "FlashCard")
+//        query.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error:NSError?) -> Void in
+//            if let objects = objects {
+//                self.objects.appendContentsOf(objects)
+//                self.mainCollectionView?.reloadData()
+//            } else {
+//                print("Error during downloading flash cards")
+//            }
+//        }
         
         if let collectionView = mainCollectionView {
             let flowLayout = UICollectionViewFlowLayout()
@@ -47,14 +58,13 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return objects.count
+        return flashCards.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         FlashCardCollectionViewCell.cell(collectionView, indexPath: indexPath)
         if let cell = FlashCardCollectionViewCell.cell(collectionView, indexPath: indexPath) as? FlashCardCollectionViewCell {
-            let obj = objects[indexPath.row]
-            cell.mainLabel?.text = "\(indexPath.row+1). \(obj["questionText"])"
+            cell.mainLabel?.text = flashCards[indexPath.row].questionText
             return cell
         }
         
