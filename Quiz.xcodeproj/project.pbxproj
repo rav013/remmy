@@ -17,9 +17,6 @@
 		9A22BCEC1C42600900BE67C4 /* FlashCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A22BCEB1C42600900BE67C4 /* FlashCardCollectionViewCell.swift */; };
 		9A22BCEE1C42601F00BE67C4 /* FlashCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A22BCED1C42601F00BE67C4 /* FlashCardCollectionViewCell.xib */; };
 		9A22BCF01C42757B00BE67C4 /* UIColor+FromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A22BCEF1C42757B00BE67C4 /* UIColor+FromString.swift */; };
-		9A55CA641C49619200C018BD /* ModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CA631C49619200C018BD /* ModelProtocols.swift */; };
-		9A55CA661C4961A700C018BD /* FlashCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CA651C4961A700C018BD /* FlashCardModel.swift */; };
-		9A55CA681C4961BC00C018BD /* CardCatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CA671C4961BC00C018BD /* CardCatalogModel.swift */; };
 		9A55CA6B1C49621500C018BD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CA6A1C49621500C018BD /* MenuViewController.swift */; };
 		9A55CCC81C4968D500C018BD /* AnyObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CB4A1C4968D400C018BD /* AnyObserver.swift */; };
 		9A55CCC91C4968D500C018BD /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CB4B1C4968D400C018BD /* Cancelable.swift */; };
@@ -146,6 +143,10 @@
 		9A55CD421C4968D500C018BD /* ReplaySubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CBCC1C4968D400C018BD /* ReplaySubject.swift */; };
 		9A55CD431C4968D500C018BD /* SubjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CBCD1C4968D400C018BD /* SubjectType.swift */; };
 		9A55CD441C4968D500C018BD /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CBCE1C4968D400C018BD /* Variable.swift */; };
+		9A55CDCC1C49F4C700C018BD /* CardCatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CDC91C49F4C700C018BD /* CardCatalogModel.swift */; };
+		9A55CDCD1C49F4C700C018BD /* FlashCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CDCA1C49F4C700C018BD /* FlashCardModel.swift */; };
+		9A55CDD01C49F4F000C018BD /* ParseComDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CDCF1C49F4F000C018BD /* ParseComDownloader.swift */; };
+		9A55CDD21C49F5DB00C018BD /* InternalErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CDD11C49F5DB00C018BD /* InternalErrors.swift */; };
 		DAB22372CAC4CF9440B8E961 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008D8C71DE49500E147EA3DB /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -186,9 +187,6 @@
 		9A22BCEB1C42600900BE67C4 /* FlashCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		9A22BCED1C42601F00BE67C4 /* FlashCardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlashCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		9A22BCEF1C42757B00BE67C4 /* UIColor+FromString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FromString.swift"; sourceTree = "<group>"; };
-		9A55CA631C49619200C018BD /* ModelProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelProtocols.swift; sourceTree = "<group>"; };
-		9A55CA651C4961A700C018BD /* FlashCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashCardModel.swift; sourceTree = "<group>"; };
-		9A55CA671C4961BC00C018BD /* CardCatalogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCatalogModel.swift; sourceTree = "<group>"; };
 		9A55CA6A1C49621500C018BD /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		9A55CB4A1C4968D400C018BD /* AnyObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyObserver.swift; sourceTree = "<group>"; };
 		9A55CB4B1C4968D400C018BD /* Cancelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cancelable.swift; sourceTree = "<group>"; };
@@ -315,6 +313,10 @@
 		9A55CBCC1C4968D400C018BD /* ReplaySubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaySubject.swift; sourceTree = "<group>"; };
 		9A55CBCD1C4968D400C018BD /* SubjectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectType.swift; sourceTree = "<group>"; };
 		9A55CBCE1C4968D400C018BD /* Variable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
+		9A55CDC91C49F4C700C018BD /* CardCatalogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCatalogModel.swift; sourceTree = "<group>"; };
+		9A55CDCA1C49F4C700C018BD /* FlashCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashCardModel.swift; sourceTree = "<group>"; };
+		9A55CDCF1C49F4F000C018BD /* ParseComDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseComDownloader.swift; sourceTree = "<group>"; };
+		9A55CDD11C49F5DB00C018BD /* InternalErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				9A22BCE41C4259D600BE67C4 /* Extensions */,
+				9A55CDD11C49F5DB00C018BD /* InternalErrors.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -409,6 +412,8 @@
 		9A22BCC71C3F10DC00BE67C4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9A55CDC91C49F4C700C018BD /* CardCatalogModel.swift */,
+				9A55CDCA1C49F4C700C018BD /* FlashCardModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -461,9 +466,7 @@
 		9A55CA621C49615900C018BD /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				9A55CA631C49619200C018BD /* ModelProtocols.swift */,
-				9A55CA651C4961A700C018BD /* FlashCardModel.swift */,
-				9A55CA671C4961BC00C018BD /* CardCatalogModel.swift */,
+				9A55CDCF1C49F4F000C018BD /* ParseComDownloader.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -916,7 +919,6 @@
 				9A55CCCF1C4968D500C018BD /* SynchronizedSubscribeType.swift in Sources */,
 				9A55CCD31C4968D500C018BD /* InfiniteSequence.swift in Sources */,
 				9A55CCDF1C4968D500C018BD /* ScopedDisposable.swift in Sources */,
-				9A55CA661C4961A700C018BD /* FlashCardModel.swift in Sources */,
 				9A55CD191C4968D500C018BD /* TakeWhile.swift in Sources */,
 				9A55CD301C4968D500C018BD /* ObserverType+Extensions.swift in Sources */,
 				9A55CD281C4968D500C018BD /* Observable+Multiple.swift in Sources */,
@@ -929,6 +931,7 @@
 				9A55CD1E1C4968D500C018BD /* WithLatestFrom.swift in Sources */,
 				9A55CD3A1C4968D500C018BD /* OperationQueueScheduler.swift in Sources */,
 				9A55CD161C4968D500C018BD /* Take.swift in Sources */,
+				9A55CDCC1C49F4C700C018BD /* CardCatalogModel.swift in Sources */,
 				9A55CD181C4968D500C018BD /* TakeUntil.swift in Sources */,
 				9A55CCCB1C4968D500C018BD /* Lock.swift in Sources */,
 				9A55CD2B1C4968D500C018BD /* Observable+Time.swift in Sources */,
@@ -938,16 +941,17 @@
 				9A55CCCA1C4968D500C018BD /* AsyncLock.swift in Sources */,
 				9A55CD371C4968D500C018BD /* DispatchQueueSchedulerPriority.swift in Sources */,
 				9A55CD0E1C4968D500C018BD /* ShareReplay1.swift in Sources */,
+				9A55CDD21C49F5DB00C018BD /* InternalErrors.swift in Sources */,
 				9A55CD1F1C4968D500C018BD /* Zip+arity.swift in Sources */,
 				9A55CCF91C4968D500C018BD /* Do.swift in Sources */,
 				9A55CD3E1C4968D500C018BD /* SerialDispatchQueueScheduler.swift in Sources */,
 				9A55CD331C4968D500C018BD /* RxBox.swift in Sources */,
 				9A55CD0F1C4968D500C018BD /* Sink.swift in Sources */,
-				9A55CA641C49619200C018BD /* ModelProtocols.swift in Sources */,
 				9A55CD391C4968D500C018BD /* MainScheduler.swift in Sources */,
 				9A55CD211C4968D500C018BD /* Zip+CollectionType.swift in Sources */,
 				9A55CD321C4968D500C018BD /* Rx.swift in Sources */,
 				9A55CCEF1C4968D500C018BD /* CombineLatest+arity.swift in Sources */,
+				9A55CDD01C49F4F000C018BD /* ParseComDownloader.swift in Sources */,
 				9A55CD2A1C4968D500C018BD /* Observable+StandardSequenceOperators.swift in Sources */,
 				9A55CCD81C4968D500C018BD /* CompositeDisposable.swift in Sources */,
 				9A55CD011C4968D500C018BD /* Map.swift in Sources */,
@@ -965,6 +969,7 @@
 				9A55CD1A1C4968D500C018BD /* Throttle.swift in Sources */,
 				9A55CD171C4968D500C018BD /* TakeLast.swift in Sources */,
 				9A55CD051C4968D500C018BD /* ObserveOn.swift in Sources */,
+				9A55CDCD1C49F4C700C018BD /* FlashCardModel.swift in Sources */,
 				9A55CD2F1C4968D500C018BD /* TailRecursiveSink.swift in Sources */,
 				9A55CCD01C4968D500C018BD /* SynchronizedUnsubscribeType.swift in Sources */,
 				9A55CCE01C4968D500C018BD /* SerialDisposable.swift in Sources */,
@@ -986,7 +991,6 @@
 				9A55CD0A1C4968D500C018BD /* RefCount.swift in Sources */,
 				9A55CCD91C4968D500C018BD /* DisposeBag.swift in Sources */,
 				9A55CD131C4968D500C018BD /* StartWith.swift in Sources */,
-				9A55CA681C4961BC00C018BD /* CardCatalogModel.swift in Sources */,
 				9A55CD121C4968D500C018BD /* SkipWhile.swift in Sources */,
 				9A55CCE31C4968D500C018BD /* SubscriptionDisposable.swift in Sources */,
 				9A55CCF51C4968D500C018BD /* Debug.swift in Sources */,

@@ -22,10 +22,12 @@ class MenuViewController: UIViewController {
 
         let loader = ParseComLoader<FlashCardModel>()
         loader.fetchCards().subscribe(onNext: { (cardsModel) -> (Void) in
-                print("Card has been downloaded")
-            }, onError: { (error) -> Void in
-                print("Downloading error \(error)")
-            })
+            self.flashCards = cardsModel
+            self.mainCollectionView?.reloadData()
+            print("Card has been downloaded")
+        }, onError: { (error) -> Void in
+            print("Downloading error \(error)")
+        })
         .addDisposableTo(disposeBag)
 //        let query = PFQuery(className: "FlashCard")
 //        query.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error:NSError?) -> Void in
