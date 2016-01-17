@@ -147,6 +147,9 @@
 		9A55CDCD1C49F4C700C018BD /* FlashCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CDCA1C49F4C700C018BD /* FlashCardModel.swift */; };
 		9A55CDD01C49F4F000C018BD /* ParseComDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CDCF1C49F4F000C018BD /* ParseComDownloader.swift */; };
 		9A55CDD21C49F5DB00C018BD /* InternalErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CDD11C49F5DB00C018BD /* InternalErrors.swift */; };
+		9A55CDD51C4C3C6400C018BD /* LoadingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CDD31C4C3C6400C018BD /* LoadingProgressView.swift */; };
+		9A55CDD61C4C3C6400C018BD /* LoadingProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A55CDD41C4C3C6400C018BD /* LoadingProgressView.xib */; };
+		9A55CDD81C4C459400C018BD /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CDD71C4C459400C018BD /* UIView+Layout.swift */; };
 		DAB22372CAC4CF9440B8E961 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008D8C71DE49500E147EA3DB /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -317,6 +320,9 @@
 		9A55CDCA1C49F4C700C018BD /* FlashCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashCardModel.swift; sourceTree = "<group>"; };
 		9A55CDCF1C49F4F000C018BD /* ParseComDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseComDownloader.swift; sourceTree = "<group>"; };
 		9A55CDD11C49F5DB00C018BD /* InternalErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalErrors.swift; sourceTree = "<group>"; };
+		9A55CDD31C4C3C6400C018BD /* LoadingProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingProgressView.swift; path = Reusable/LoadingProgressView.swift; sourceTree = "<group>"; };
+		9A55CDD41C4C3C6400C018BD /* LoadingProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadingProgressView.xib; path = Reusable/LoadingProgressView.xib; sourceTree = "<group>"; };
+		9A55CDD71C4C459400C018BD /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -429,6 +435,8 @@
 		9A22BCCC1C3F10DC00BE67C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9A55CDD31C4C3C6400C018BD /* LoadingProgressView.swift */,
+				9A55CDD41C4C3C6400C018BD /* LoadingProgressView.xib */,
 				9A55CA691C49621500C018BD /* Screens */,
 				9A22BCE11C42594500BE67C4 /* Cells */,
 				9A22BCD81C4252AC00BE67C4 /* Storyboards */,
@@ -459,6 +467,7 @@
 			children = (
 				9A22BCE51C425CC100BE67C4 /* CellDequeueExtensions.swift */,
 				9A22BCEF1C42757B00BE67C4 /* UIColor+FromString.swift */,
+				9A55CDD71C4C459400C018BD /* UIView+Layout.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -821,6 +830,7 @@
 				9A55CCF01C4968D500C018BD /* CombineLatest+arity.tt in Resources */,
 				9A22BCDD1C4252AC00BE67C4 /* LaunchScreen.storyboard in Resources */,
 				9A22BCEE1C42601F00BE67C4 /* FlashCardCollectionViewCell.xib in Resources */,
+				9A55CDD61C4C3C6400C018BD /* LoadingProgressView.xib in Resources */,
 				9A55CD201C4968D500C018BD /* Zip+arity.tt in Resources */,
 				9A55CCE71C4968D500C018BD /* Info.plist in Resources */,
 			);
@@ -946,6 +956,7 @@
 				9A55CCF91C4968D500C018BD /* Do.swift in Sources */,
 				9A55CD3E1C4968D500C018BD /* SerialDispatchQueueScheduler.swift in Sources */,
 				9A55CD331C4968D500C018BD /* RxBox.swift in Sources */,
+				9A55CDD51C4C3C6400C018BD /* LoadingProgressView.swift in Sources */,
 				9A55CD0F1C4968D500C018BD /* Sink.swift in Sources */,
 				9A55CD391C4968D500C018BD /* MainScheduler.swift in Sources */,
 				9A55CD211C4968D500C018BD /* Zip+CollectionType.swift in Sources */,
@@ -1010,6 +1021,7 @@
 				9A55CCFA1C4968D500C018BD /* ElementAt.swift in Sources */,
 				9A55CD241C4968D500C018BD /* Observable+Binding.swift in Sources */,
 				9A55CCEA1C4968D500C018BD /* ObservableConvertibleType.swift in Sources */,
+				9A55CDD81C4C459400C018BD /* UIView+Layout.swift in Sources */,
 				9A55CCE61C4968D500C018BD /* ImmediateSchedulerType.swift in Sources */,
 				9A55CCE91C4968D500C018BD /* Observable.swift in Sources */,
 				9A55CD041C4968D500C018BD /* Never.swift in Sources */,

@@ -29,15 +29,6 @@ class MenuViewController: UIViewController {
             print("Downloading error \(error)")
         })
         .addDisposableTo(disposeBag)
-//        let query = PFQuery(className: "FlashCard")
-//        query.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error:NSError?) -> Void in
-//            if let objects = objects {
-//                self.objects.appendContentsOf(objects)
-//                self.mainCollectionView?.reloadData()
-//            } else {
-//                print("Error during downloading flash cards")
-//            }
-//        }
         
         if let collectionView = mainCollectionView {
             let flowLayout = UICollectionViewFlowLayout()
