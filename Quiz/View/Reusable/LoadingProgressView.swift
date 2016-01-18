@@ -11,8 +11,9 @@ import UIKit
 
 class LoadingProgressView : UIView {
     
-    @IBOutlet weak var progressElementWidthConstraint: NSLayoutConstraint!
-    @IBOutlet weak var progressElement: UIView!
+    @IBOutlet weak var noInternetMessage: UILabel?
+    @IBOutlet weak var progressElementWidthConstraint: NSLayoutConstraint?
+    @IBOutlet weak var progressElement: UIView?
     
     
     enum AnimationType : Int {
@@ -54,8 +55,12 @@ class LoadingProgressView : UIView {
         return nil
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        noInternetMessage?.text = NSLocalizedString("No internet connection", comment: "")
+    }
+    
     private func _animate() {
-        //log("_animate started t=\(animationType.rawValue) ct=\(currentAnimationTime) tt=\(targetAnimationTime)")
         
         if isAnimating {
             return
@@ -72,7 +77,7 @@ class LoadingProgressView : UIView {
         
         let percent = currentAnimationTime / targetAnimationTime
         let currentPosition = startWidth * CGFloat(1-percent) + targetWidth * CGFloat(percent)
-        progressElementWidthConstraint.constant = currentPosition
+        progressElementWidthConstraint?.constant = currentPosition
         
         isAnimating = true
         UIView.animateWithDuration(Consts.AnimationQuant,
@@ -90,7 +95,7 @@ class LoadingProgressView : UIView {
         animationType = .Finish
         UIView.animateWithDuration(Consts.HideAnimationDuration, animations: { () -> Void in
             if !self.successfull {
-                self.progressElement.backgroundColor = UIColor(netHex: 0xddf61343)
+                self.progressElement?.backgroundColor = UIColor(netHex: 0xddf61343)
                 if let heightC = self.heightConstraint {
                     heightC.constant = Consts.ErrorHeight
                 }
@@ -109,8 +114,9 @@ class LoadingProgressView : UIView {
         }
     }
     
-    func finishAnimation(success:Bool) {
+    func finishAnimation(success:Bool, errorMessage:String? = nil) {
         successfull = success
+        noInternetMessage?.text = errorMessage
         
         animationType = .SecondProgress
         

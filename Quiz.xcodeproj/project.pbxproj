@@ -150,6 +150,7 @@
 		9A55CDD51C4C3C6400C018BD /* LoadingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CDD31C4C3C6400C018BD /* LoadingProgressView.swift */; };
 		9A55CDD61C4C3C6400C018BD /* LoadingProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A55CDD41C4C3C6400C018BD /* LoadingProgressView.xib */; };
 		9A55CDD81C4C459400C018BD /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CDD71C4C459400C018BD /* UIView+Layout.swift */; };
+		9A55CDDA1C4C510200C018BD /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55CDD91C4C510200C018BD /* Dispatcher.swift */; };
 		DAB22372CAC4CF9440B8E961 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008D8C71DE49500E147EA3DB /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -323,6 +324,7 @@
 		9A55CDD31C4C3C6400C018BD /* LoadingProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingProgressView.swift; path = Reusable/LoadingProgressView.swift; sourceTree = "<group>"; };
 		9A55CDD41C4C3C6400C018BD /* LoadingProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadingProgressView.xib; path = Reusable/LoadingProgressView.xib; sourceTree = "<group>"; };
 		9A55CDD71C4C459400C018BD /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		9A55CDD91C4C510200C018BD /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +413,7 @@
 			children = (
 				9A22BCE41C4259D600BE67C4 /* Extensions */,
 				9A55CDD11C49F5DB00C018BD /* InternalErrors.swift */,
+				9A55CDD91C4C510200C018BD /* Dispatcher.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -979,6 +982,7 @@
 				9A55CCFC1C4968D500C018BD /* FailWith.swift in Sources */,
 				9A55CD1A1C4968D500C018BD /* Throttle.swift in Sources */,
 				9A55CD171C4968D500C018BD /* TakeLast.swift in Sources */,
+				9A55CDDA1C4C510200C018BD /* Dispatcher.swift in Sources */,
 				9A55CD051C4968D500C018BD /* ObserveOn.swift in Sources */,
 				9A55CDCD1C49F4C700C018BD /* FlashCardModel.swift in Sources */,
 				9A55CD2F1C4968D500C018BD /* TailRecursiveSink.swift in Sources */,

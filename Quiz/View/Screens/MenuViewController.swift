@@ -12,21 +12,27 @@ import Parse
 class MenuViewController: UIViewController {
     
     @IBOutlet weak var mainCollectionView: UICollectionView?
-    
+    @IBOutlet weak var loadingPlaceholder: UIView?
+    var loadingProgressView: LoadingProgressView?
     let disposeBag = DisposeBag()
     
     var flashCards:[FlashCardModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let loadingPlaceholder = loadingPlaceholder {
+            loadingProgressView = LoadingProgressView.loadingProgressViewToTopOfView(loadingPlaceholder)
+        }
+        loadingProgressView?.slowLoading()
+        
         let loader = ParseComLoader<FlashCardModel>()
         loader.fetchCards().subscribe(onNext: { (cardsModel) -> (Void) in
+            self.loadingProgressView?.finishAnimation(true)
             self.flashCards = cardsModel
             self.mainCollectionView?.reloadData()
-            print("Card has been downloaded")
         }, onError: { (error) -> Void in
-            print("Downloading error \(error)")
+            self.loadingProgressView?.finishAnimation(false)
         })
         .addDisposableTo(disposeBag)
         

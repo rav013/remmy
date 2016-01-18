@@ -41,16 +41,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="PIb-W5-Wnv"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIf-qF-a14">
+                                <rect key="frame" x="0.0" y="20" width="600" height="10"/>
+                                <color key="backgroundColor" red="0.67099933501584097" green="1" blue="0.52971141406642452" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="BwW-WQ-lnf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VZj-qx-lW4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2MF-Yu-CVv"/>
+                            <constraint firstAttribute="trailing" secondItem="RIf-qF-a14" secondAttribute="trailing" id="ToP-WJ-kYP"/>
                             <constraint firstItem="VZj-qx-lW4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VPZ-6A-aZ1"/>
+                            <constraint firstItem="RIf-qF-a14" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ymt-ka-PPW"/>
+                            <constraint firstItem="RIf-qF-a14" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ofO-9Y-Ndd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VZj-qx-lW4" secondAttribute="bottom" id="qwy-52-G4m"/>
                             <constraint firstAttribute="trailing" secondItem="VZj-qx-lW4" secondAttribute="trailing" id="wwp-I6-PLF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loadingPlaceholder" destination="RIf-qF-a14" id="bM5-uI-IUG"/>
                         <outlet property="mainCollectionView" destination="VZj-qx-lW4" id="JPX-bc-pPc"/>
                     </connections>
                 </viewController>
